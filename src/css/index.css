@@ -136,13 +136,13 @@ p {
 
 /* About */
 
-.about--container {}
+/*.about--container {}*/
 
 .about--inner {
   gap: 25px;
 }
 
-.about--text {}
+/*.about--text {}*/
 
 .about--inner>img {
   max-width: 291px;
