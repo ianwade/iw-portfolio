@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/src/assets/favicon2.ico">
   <title>Ian Wade</title>
 
   <!-- Fontawesome -->
@@ -24,34 +25,43 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.extensions.min.js"
     integrity="sha512-N6ysYlvH4QP8/xFAoTdbhl1nFUKjYp8U6SZ3v94NSARDpC0MZfBMXiSDoE7hFd8j1jvr8BgVNnknTZuxyq7qSg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/vendors/easings.min.js"
+    integrity="sha512-SrKslwu6IjHEo/8mAOtkoUOT3MzHCEOFWktrC8BNtjPuBBYLYjg1y/Marat34uYfOfxDMLEwy8DLArWEVc2i+w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <!--Bootstrap 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>-->
 
 </head>
 
 <body>
   <main>
-    <header>
-      <div class="header--contents">
+
+    <header class="w-100 d-flex align-center justify-center">
+      <div class="w-100 d-flex align-center justify-center header--contents">
         <a href="#landing"><img src="src/assets/ianlogo.svg" /></a>
         <h3>--Socials--</h3>
-        <div style="border-left: 1px solid var(--border-color);">
+        <!--<div style="border-left: 1px solid var(--border-color);">
           <i class="fa-solid fa-bars"></i>
-        </div>
+        </div>-->
       </div>
     </header>
 
-    <div class="big-container">
+    <div class="maxwidth-container">
 
-      <div class="nav--max-width">
+      <div class="d-flex justify-center nav--max-width">
         <div class="nav--outer-container">
           <nav>
             <div class="nav--container">
               <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li id="nav--landing"></li>
+                <li id="nav--about"><a href="#about">About</a></li>
+                <li id="nav--projects"><a href="#projects">Projects</a></li>
+                <li id="nav--contact"><a href="#contact">Contact</a></li>
               </ul>
             </div>
           </nav>
@@ -61,8 +71,8 @@
       <div id="fullpage">
 
         <div class="section">
-          <section class="container landing--container">
-            <div class='landing--name-text'>
+          <section class="custom-container landing--container">
+            <div class='d-flex landing--name-text'>
               <img src="src/assets/ianlogo.svg" />
               <p>
                 Full Stack Development<br>
@@ -70,14 +80,15 @@
                 UI/UX
               </p>
             </div>
-
-            <i class="fa-solid fa-chevron-down"></i>
           </section>
+          <div class="d-flex justify-center align-center">
+            <i class="fa-solid fa-chevron-down" style="position: absolute; bottom: 0; margin-bottom: var(--inner-padding);"></i>
+          </div>
         </div>
 
         <div class="section">
-          <section class='container about--container'>
-            <div class='about--inner'>
+          <section class='custom-container about--container'>
+            <div class='d-flex about--inner'>
               <img src="src/assets/profile.jpeg" />
               <div class='about--text'>
                 <h1>Hi, I'm Ian Wade</h1>
@@ -87,12 +98,12 @@
                   I am a recent graduate of Lindenwood University in St. Charles, MO (May 2023)<br></br>
                   This is my cat Misti, together we create music under the alias misticat<br></br>
                 </p>
-                <div class='about--icon-text'>
+                <div class='d-flex about--icon-text'>
                   <i class="fa-solid fa-graduation-cap"></i>
                   <p>Bachelor of Computer Science (Magna Cum Laude)<br></br>
                     Minor in Web Design & User Experience</p>
                 </div>
-                <div class='about--icon-text'>
+                <div class='d-flex about--icon-text'>
                   <i class="fa-solid fa-location-dot"></i>
                   <p>St. Louis, MO 63025</p>
                 </div>
@@ -102,18 +113,18 @@
         </div>
 
         <div class="section">
-          <section class='container projects--container'>
+          <section class='custom-container projects--container'>
             <div class="projects--filter">
               <ul>
-                <li onclick="navigateToSection('projects--development')">Development</li>
-                <li onclick="navigateToSection('projects--uiux')">UI/UX</li>
-                <li onclick="navigateToSection('projects--design')">Design</li>
-                <li onclick="navigateToSection('projects--motion')">Motion</li>
+                <li class="active"> <a href="#projects--development">Development</a> </li>
+                <li> <a href="#projects--uiux">UI/UX</a></li>
+                <li> <a href="#projects--design">Design</a></li>
+                <li> <a href="#projects--motion">Motion</a></li>
               </ul>
             </div>
-            <div class="projects--inner-container">
-              <div id="projects--development" class="projects--inner-container">
-                <div class="projects--header">
+            <div class="d-flex justify-center projects--inner-container">
+              <div id="projects--development" class="d-flex justify-center projects--inner-container">
+                <div class="d-flex justify-center align-center projects--header">
                   <h3>Development</h3>
                   <hr>
                 </div>
@@ -126,43 +137,93 @@
                     </p>
                     <h3>2023</h3>
                   </div>
-                  <div class="projects--item-contents">
-                    <h1>Coach's Corner</h1>
-                    <p>A fully featured, web-based athlete management system for storing
-                      and visualizing athlete data, developed for use by the
-                      Lindenwood University athletics department
-                    </p>
+                  <div class="projects--item-contents" style="height: 0px; display: none;">
+                    <div class="d-flex w-100 projects--contents-container">
+                      <div class="d-flex inner-container-half">
+                        <p><strong>Brief: </strong>Coach’s Corner was a senior capstone development, and stores athletes’ KPI (Key
+                          Performance Indicators) data logged by coaches & other athletic staff that can then be visualized
+                          on various graph types. Displays raw scores, T-Scores, and spider graph functionally. Supports
+                          multiple users and is accessible from anywhere.
+                        </p>
+                      </div>
+                      <div class="d-flex inner-container-half">
+                        <p><strong>Contributions: </strong>User Interface Design, Front-End Development, Back-End Development, User Testing</p>
+                        <div>
+                          <p><strong>Tools Used</strong></p>
+                          <div class="projects--tools">
+                            <img src="src/assets/icons/django-svgrepo-com.svg" />
+                            <img src="src/assets/icons/python-svgrepo-com.svg" />
+                            <img src="src/assets/icons/mysql-logo-svgrepo-com.svg" />
+                            <img src="src/assets/icons/bootstrap-fill-svgrepo-com.svg" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-center projects--inner-container">
+                      <div class="d-flex projects--gallery">
+                        <div class="projects--gallery-wrapper"><div style="background-image: url('src/assets/gallery-images/Screenshot 2023-05-25 at 7.36.31 PM.png');"></div></div>
+                        <div class="projects--gallery-wrapper"><div style="background-image: url('src/assets/gallery-images/Screenshot 2023-05-25 at 7.36.45 PM.png');"></div></div>
+                        <div class="projects--gallery-wrapper"><div style="background-image: url('src/assets/gallery-images/Screenshot 2023-05-25 at 7.36.57 PM.png');"></div></div>
+                        <div class="projects--gallery-wrapper"><div style="background-image: url('src/assets/gallery-images/Screenshot 2023-05-25 at 7.37.05 PM.png');"></div></div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-center align-center projects--footer">
+                      <div class="projects--closer"><i class="fa-sharp fa-solid fa-xmark"></i></div>
+                      <div style="position: absolute; right: 0;">
+                        <button class="projects--visit-button"><img src="/src/assets/icons/github-142-svgrepo-com.svg"/> View on Github</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div id="projects--uiux" class="projects--inner-container">
-                <div class="projects--header">
+              <div id="projects--uiux" class="d-flex justify-center projects--inner-container">
+                <div class="d-flex justify-center align-center projects--header">
                   <h3>UI/UX</h3>
                   <hr>
                 </div>
-                <div class="projects--item-full"></div>
-                <div class="projects--item-full"></div>
-                <div class="projects--item-full"></div>
+                <div id="catshack" class="projects--item-full">
+                  <div class="projects--item-thumbnail">
+                    <h1>CatShack</h1>
+                    <p>User interface design mockup of a fictious e-commerce site for pet-related goods with a focus on feline companions
+                    </p>
+                    <h3>2022</h3>
+                  </div>
+                  <div class="projects--item-contents" style="height: 0px; display: none;"></div>
+                </div>
+                <div id="angelines-garden" class="projects--item-full">
+                  <div class="projects--item-thumbnail">
+                    <h1>Angeline's Garden</h1>
+                    <h3>2021</h3>
+                  </div>
+                  <div class="projects--item-contents" style="height: 0px; display: none;"></div>
+                </div>
+                <div class="projects--item-full">
+                  <div class="projects--item-thumbnail">
+                    <h1>Drinkify</h1>
+                    <h3>2021</h3>
+                  </div>
+                  <div class="projects--item-contents" style="height: 0px; display: none;"></div>
+                </div>
               </div>
-              <div class="projects--inner-container">
-                <div class="projects--header">
+              <div class="d-flex justify-center projects--inner-container">
+                <div class="d-flex justify-center align-center projects--header">
                   <h3>Design</h3>
                   <hr>
                 </div>
               </div>
-              <div id="projects--design" class="projects--inner-container-grid">
-                <div class="projects--item-half"></div>
+              <div id="projects--design" class="d-flex projects--inner-container-grid">
+                <div class="projects--item-half"><img src=""></div>
                 <div class="projects--item-half"></div>
                 <div class="projects--item-half"></div>
                 <div class="projects--item-half"></div>
               </div>
-              <div class="projects--inner-container">
-                <div class="projects--header">
+              <div class="d-flex justify-center projects--inner-container">
+                <div class="d-flex justify-center align-center projects--header">
                   <h3>Motion</h3>
                   <hr>
                 </div>
               </div>
-              <div id="projects--motion" class="projects--inner-container-grid">
+              <div id="projects--motion" class="d-flex justify-center projects--inner-container-grid">
                 <div class="projects--item-half"></div>
                 <div class="projects--item-half"></div>
                 <div class="projects--item-half"></div>
@@ -173,14 +234,14 @@
         </div>
 
         <div class="section">
-          <section class="container contact--container">
+          <section class="custom-container contact--container">
 
             <div class="contact--inner-container">
-              <div class="contact--container-half">
+              <div class="d-flex inner-container-half" style="text-align: center; margin-bottom: var(--outer-padding);">
                 <p>Feel free to email me at</p>
                 <h1>iwade0704@gmail.com</h1>
               </div>
-              <div class="contact--container-half">
+              <div class="d-flex inner-container-half" style="text-align: center;">
                 <p>Check out my socials</p>
                 <h3>--Socials--</h3>
               </div>
@@ -189,7 +250,7 @@
             <div class="contact--inner-container">
               <div class="contact--container-resume">
                 <p>If you're hiring... please...</p>
-                <button>Download my Resume -></button>
+                <button><i class="fa-regular fa-file"></i>Download my Resume -></button>
               </div>
             </div>
 
@@ -200,6 +261,7 @@
   </main>
 
   <script src="/main.js"></script>
+  <script src="/scrollspy.js"></script>
 
 </body>
 
