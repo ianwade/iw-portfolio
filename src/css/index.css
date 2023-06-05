@@ -109,7 +109,7 @@ li:hover {
   transition: .2s;
 }
 
-li>a {
+a {
   text-decoration: none;
   color: var(--primary-color);
 }
@@ -248,7 +248,6 @@ nav {
   background-image:
     var(--linear-grad-overlay),
     url('../assets/coachs-corner.png');
-
 }
 
 #catshack>.projects--item-thumbnail {
@@ -261,6 +260,12 @@ nav {
   background-image:
     var(--linear-grad-overlay),
     url('../assets/angelines-garden.png');
+}
+
+#drinkify>.projects--item-thumbnail {
+  background-image:
+    var(--linear-grad-overlay),
+    url('../assets/drinkify.png');
 }
 
 .projects--inner-container {
@@ -299,9 +304,9 @@ nav {
   overflow: hidden;
 }
 
-.projects--item-full:hover {
+/*.projects--item-thumbnail:hover {
   scale: 1.01;
-}
+}*/
 
 .projects--item-thumbnail {
   position: relative;
@@ -335,15 +340,24 @@ nav {
 }
 
 .projects--inner-container-grid {
-  flex-direction: column;
   width: 100%;
+  flex-direction: column;
+  gap: var(--inner-padding);
+}
+
+.projects--grid-row {
+  gap: var(--inner-padding);
 }
 
 .projects--item-half {
   background-color: aquamarine;
   border: 1px solid var(--border-color);
   width: 50%;
-  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.projects--item-half > img {
+  width: inherit;
 }
 
 .projects--header {
@@ -362,7 +376,8 @@ nav {
   gap: var(--inner-padding);
 }
 
-.projects--tools>img {
+.projects--tools > img,
+.projects--tools > svg {
   width: 50px;
   height: auto;
 }
@@ -370,7 +385,8 @@ nav {
 .projects--gallery {
   box-sizing: border-box;
   flex-wrap: wrap;
-  gap: calc(var(--inner-padding) / 2);
+  gap: var(--inner-padding);
+  align-content: flex-start;
   width: 100%;
 }
 
@@ -393,17 +409,22 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'SpaceGrotesk-Bold';
   background-color: var(--accent-color);
-  width: 150px;
-  height: 40px;
+  height: 50px;
+  width: 175px;
   border: none;
   gap: var(--inner-padding);
+  padding-block: 10px;
+  padding-inline: 20px;
+  color: black;
+  box-sizing: border-box;
 }
 
-.projects--visit-button > i {
-  rotate: -45deg;
+.projects--visit-button > img,
+.projects--visit-button > svg  {
+  height: 80%;
 }
 
 .projects--footer {
@@ -553,4 +574,9 @@ nav {
   .projects--contents-container {
     flex-direction: column;
   }
+
+  .projects--footer {
+    justify-content: left;
+  }
 }
+
