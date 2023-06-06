@@ -8,33 +8,29 @@
   <title>Ian Wade</title>
 
   <!-- Fontawesome -->
-  <link href="./src/assets/fontawesome/css/fontawesome.css" rel="stylesheet">
-  <link href="./src/assets/fontawesome/css/brands.css" rel="stylesheet">
-  <link href="./src/assets/fontawesome/css/solid.css" rel="stylesheet">
+  <link href="src/assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="src/assets/fontawesome/css/brands.css" rel="stylesheet">
+  <link href="src/assets/fontawesome/css/solid.css" rel="stylesheet">
 
   <!-- Styling -->
   <link rel="stylesheet" type="text/css" href="src/css/index.css">
+  <link rel="stylesheet" type="text/css" href="src/css/fullpage.css">
 
-  <!-- Fullpage.js -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.css"
-    integrity="sha512-DbP1b6q56Ud5q0L+lvw9COyyH/+pN1lVmySvun4UsH8vmfdIHou+PAHfMnGXf6Fvd9rYLjSojeuPhQz2euU1cw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js"
-    integrity="sha512-GS3CSFQ4aj+0fL2a0wV1ouvpdbTZ3eEUriXTpXt50dc0CkO1fgyWuLoPA5NWy1PAWmcaZNneM+OAThgCqPnX+g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.extensions.min.js"
-    integrity="sha512-N6ysYlvH4QP8/xFAoTdbhl1nFUKjYp8U6SZ3v94NSARDpC0MZfBMXiSDoE7hFd8j1jvr8BgVNnknTZuxyq7qSg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/vendors/easings.min.js"
-    integrity="sha512-SrKslwu6IjHEo/8mAOtkoUOT3MzHCEOFWktrC8BNtjPuBBYLYjg1y/Marat34uYfOfxDMLEwy8DLArWEVc2i+w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <!-- JQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/vendors/easings.min.js"
+  integrity="sha512-SrKslwu6IjHEo/8mAOtkoUOT3MzHCEOFWktrC8BNtjPuBBYLYjg1y/Marat34uYfOfxDMLEwy8DLArWEVc2i+w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
 
-  <!--Bootstrap 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>-->
+  <!--Three.js-->
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@<version>/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@<version>/examples/jsm/"
+      }
+    }
+  </script>
 
 </head>
 
@@ -44,7 +40,10 @@
     <header class="w-100 d-flex align-center justify-center">
       <div class="w-100 d-flex align-center justify-center header--contents">
         <a href="#landing"><img src="src/assets/ianlogo.svg" /></a>
-        <h3>--Socials--</h3>
+
+        <div style="height: inherit;">
+          <svg viewBox="0 -3.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="var(--primary-color)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>behance [#163]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-100.000000, -7482.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M56.981,7324.11726 L62.069,7324.11726 L62.069,7322.65997 L56.981,7322.65997 L56.981,7324.11726 Z M59.489,7327.04322 C58.354,7327.04322 57.492,7327.74656 57.409,7329.04584 L61.481,7329.04584 C61.205,7327.50385 60.52,7327.04322 59.489,7327.04322 L59.489,7327.04322 Z M59.648,7333.06968 C60.696,7333.06968 61.465,7332.40764 61.622,7331.84992 L63.826,7331.84992 C63.196,7333.86701 61.895,7335 59.559,7335 C56.578,7335 54.905,7332.87964 54.905,7330.06626 C54.905,7323.44077 64.465,7323.20323 63.985,7330.68491 L57.409,7330.68491 C57.473,7332.20418 58.1,7333.06968 59.648,7333.06968 L59.648,7333.06968 Z M49.73,7332.77842 C50.933,7332.77842 51.775,7332.31572 51.775,7331.06705 C51.775,7329.77191 51.031,7329.21006 49.782,7329.21006 L46.768,7329.21006 L46.768,7332.77842 L49.73,7332.77842 Z M49.571,7327.26218 C50.572,7327.26218 51.263,7326.79638 51.263,7325.71399 C51.263,7324.57377 50.459,7324.22158 49.36,7324.22158 L46.768,7324.22158 L46.768,7327.26218 L49.571,7327.26218 L49.571,7327.26218 Z M49.924,7322 C52.295,7322 53.943,7322.7839 53.943,7325.22237 C53.943,7326.42973 53.458,7327.32931 52.233,7327.93557 C53.801,7328.40137 54.543,7329.62422 54.543,7331.23127 C54.543,7333.78232 52.52,7335 50.1,7335 L44,7335 L44,7322 L49.924,7322 Z" id="behance-[#163]"> </path> </g> </g> </g> </g></svg>
+        </div>
         <!--<div style="border-left: 1px solid var(--border-color);">
           <i class="fa-solid fa-bars"></i>
         </div>-->
@@ -72,8 +71,9 @@
 
         <div class="section">
           <section class="custom-container landing--container">
-            <div class='d-flex landing--name-text'>
-              <img src="src/assets/ianlogo.svg" />
+            <div class='d-flex align-center landing--name-text'>
+              <!--<img src="src/assets/ianlogo.svg" />-->
+              <canvas id="3d-landing"></canvas>
               <p>
                 Full Stack Development<br>
                 Graphic & Motion Design<br>
@@ -319,6 +319,38 @@
                 </div>
               </div>
               <div id="projects--design" class="d-flex projects--inner-container-grid">
+                <div id="less-is-more" class="projects--item-full">
+                  <div class="projects--item-thumbnail">
+                    <h1>Less is More: History of Dieter Rams</h1>
+                    <p>A small booklet showcasing the work and influence of industrial designer Dieter Rams in the modern day</p>
+                    <h3>2020</h3>
+                  </div>
+                  <div class="projects--item-contents" style="height: 0px; display: none;">
+                    <div class="d-flex w-100 projects--contents-container">
+                      <div class="d-flex inner-container-half">
+                        <p><strong>Brief: </strong>
+                        </p>
+                      </div>
+                      <div class="d-flex inner-container-half">
+                        <p><strong>Contributions: </strong>Page Layout, Design</p>
+                        <div>
+                          <p><strong>Tools Used</strong></p>
+                          <div class="projects--tools">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="var(--primary-color)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>ai</title> <path d="M19,5V19H5V5H19m0-2H5A2,2,0,0,0,3,5V19a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V5a2,2,0,0,0-2-2Z"></path> <g> <path d="M12.3,16.18l-.57-1.87H8.86l-.57,1.87H6.5L9.27,8.29h2l2.78,7.89Zm-1-3.27c-.53-1.69-.82-2.65-.89-2.87s-.11-.4-.14-.53c-.12.46-.46,1.6-1,3.4Z"></path> <path d="M14.88,8.62c0-.53.3-.8.89-.8s.89.27.89.8a.76.76,0,0,1-.22.59.9.9,0,0,1-.67.22C15.18,9.43,14.88,9.16,14.88,8.62Zm1.71,7.56H15v-6h1.64Z"></path> </g> <rect width="24" height="24" fill="none"></rect> </g></svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-center projects--inner-container">
+                      <div class="d-flex projects--gallery">
+
+                      </div>
+                    </div>
+                    <div class="d-flex justify-center align-center projects--footer">
+                      <div class="projects--closer"><i class="fa-sharp fa-solid fa-xmark"></i></div>
+                    </div>
+                  </div>
+                </div>
                 <div class="d-flex projects--grid-row">
                   <div class="projects--item-half"><img src="src/assets/Design/bpa-1.png"></div>
                   <div class="projects--item-half"></div>
@@ -371,7 +403,11 @@
     </div>
   </main>
 
-  <script src="./src/js/main.js" type="module"></script>
+  <script src="./src/js/fullpage.js" type="text/javascript"></script>
+  <script src="./src/js/jquery-3.7.0.min.js" type="text/javascript"></script>
+  <script src="./src/js/scrollspy.js" type="text/javascript"></script>
+  <script src="./src/js/3dlanding.js" type="module"></script>
+  <script src="./src/js/main.js" type="text/javascript"></script>
 
 </body>
 

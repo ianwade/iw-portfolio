@@ -33,28 +33,6 @@ new fullpage('#fullpage', {
   credits: { enabled: false, label: 'Made with fullPage.js', position: 'right'},
 });
 
-const projects = document.querySelectorAll('.projects--item-full');
-
-projects.forEach(project => {
-  const project_contents = project.querySelector('.projects--item-contents');
-
-  project.querySelectorAll('.projects--item-thumbnail').forEach(thumbnail => {
-    thumbnail.addEventListener('click', () => {
-      toggle_project(project_contents);
-    });
-  });
-
-  project.querySelectorAll('.projects--closer').forEach(closer => {
-    closer.addEventListener('click', () => {
-      toggle_project(project_contents);
-    });
-  });
-});
-
-/*closers.forEach(item => {
-  item.addEventListener('click', toggle_project(this))
-});*/
-
 function toggle_project(item_contents) {
   
     item_contents.style.height = (item_contents.style.height == '0px') ? '100%' : '0px';
@@ -63,7 +41,7 @@ function toggle_project(item_contents) {
 
 function navigateToSection(sectionId) {
   const section = document.getElementById(sectionId);
-  const headerHeight = 125; // Adjust this value based on your header's height
+  const headerHeight = 125;
 
   if (section) {
 
@@ -80,5 +58,22 @@ function navigateToSection(sectionId) {
 
 $(document).ready(function () {
   $(".projects--filter").scrollspy({ offset: -25 });
+  
+  const projects = document.querySelectorAll('.projects--item-full');
+  
+  projects.forEach(project => {
+    const project_contents = project.querySelector('.projects--item-contents');
+  
+    project.querySelectorAll('.projects--item-thumbnail').forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+        toggle_project(project_contents);
+      });
+    });
+  
+    project.querySelectorAll('.projects--closer').forEach(closer => {
+      closer.addEventListener('click', () => {
+        toggle_project(project_contents);
+      });
+    });
+  });
 });
-
