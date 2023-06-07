@@ -166,6 +166,8 @@ header {
   position: absolute;
   height: 75px;
   background-color: var(--secondary-color);
+  background-image: url(../assets/lines.gif);
+  background-size: cover;
   border-bottom: 1px solid var(--border-color);
   z-index: 2;
 
@@ -189,14 +191,15 @@ header {
 .landing--container {
   margin: 0;
   padding-top: 0;
+  padding-inline: 0 !important;
   justify-content: center;
   align-items: center;
   position: relative;
   transition: 1s;
 }
 
-.landing--name-text>img {
-  width: 300px;
+.landing--name-text {
+  margin-right: 150px;
 }
 
 .landing--container>i {
@@ -206,14 +209,23 @@ header {
   font-size: 24px;
 }
 
-.landing--name-text {
-}
-
 .landing--name-text>p {
   text-align: left;
   font-size: 24px;
   font-family: 'SpaceGrotesk-Regular';
   color: var(--font-color);
+}
+
+.landing--bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url('../assets/lines.gif');
+  background-size: 120vw;
+  overflow: hidden;
 }
 
 /* Nav */
@@ -322,6 +334,11 @@ nav {
   padding-bottom: calc(2 * var(--inner-padding));
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.projects--item-full:hover {
+  border-color: var(--accent-color);
+  transition: .2s;
 }
 
 .projects--item-thumbnail>p {
@@ -551,6 +568,11 @@ nav {
 
   .projects--gallery-wrapper {
     width: calc(50% - var(--inner-padding));
+  }
+
+  .landing--name-text {
+    flex-direction: column;
+    margin-right: 0;
   }
 
 }

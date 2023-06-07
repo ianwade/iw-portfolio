@@ -76,4 +76,24 @@ $(document).ready(function () {
       });
     });
   });
+  
 });
+/*function getAccel() {
+  DeviceMotionEvent.requestPermission().then(response => {
+    if(response == 'granted') {
+      console.log("accelerometer permission granted");
+
+      window.addEventListener('devicemotion', (event) => {
+        console.log(event);
+      });
+
+      window.addEventListener('deviceorientation', (event) => {
+        console.log(event);
+      });
+
+    }
+
+
+
+  })
+}*/
